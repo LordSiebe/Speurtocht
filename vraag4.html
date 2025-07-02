@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Speurtocht</title>
+  
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<style>
+  body {
+    font-family: 'Poiret One', cursive;
+    margin: 0;
+    padding: 0;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/1/1b/Tilburg_-_kadasterkaart_1900.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+  }
+  .container {
+    background-color: rgba(9, 34, 255, 0.5);
+    max-width: 700px;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 12px;
+  }
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: white;
+    color: #0922ff;
+    font-family: 'Delius Swash Caps', cursive;
+  }
+  button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color: #0922ff;
+    font-family: 'Delius Swash Caps', cursive;
+    cursor: pointer;
+  }
+  .correct-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffff66;
+    margin-top: 1rem;
+  }
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <h2>Als je rust en spiritualiteit zoekt onder het genot van een biertje, waar ga je dan heen?</h2>
+    
+    
+    <input type="text" id="answer" placeholder="Typ hier je antwoord...">
+    <button onclick="checkAnswer()">Controleer</button>
+    <div id="feedback"></div>
+    <script>
+      function launchConfetti() {
+        const duration = 2500;
+        const end = Date.now() + duration;
+        (function frame() {
+          confetti({
+            particleCount: 10,
+            angle: 60,
+            spread: 75,
+            startVelocity: 45,
+            scalar: 0.8,
+            origin: { x: 0 },
+            colors: ['#ffffff', '#ffd1dc', '#ccf2ff', '#ffffcc', '#e6e6fa']
+          });
+          confetti({
+            particleCount: 10,
+            angle: 120,
+            spread: 75,
+            startVelocity: 45,
+            scalar: 0.8,
+            origin: { x: 1 },
+            colors: ['#ffffff', '#ffd1dc', '#ccf2ff', '#ffffcc', '#e6e6fa']
+          });
+          if (Date.now() < end) {
+            requestAnimationFrame(frame);
+          }
+        })();
+      }
+      function checkAnswer() {
+        const input = document.getElementById('answer').value.trim().toLowerCase();
+        const feedback = document.getElementById('feedback');
+        if (input === 'koningshoeven') {
+          feedback.innerHTML = `
+            <span class="correct-message">Correct!</span>
+            <p><strong>Aanwijzing:</strong> De laatste etappe: tijd om af te sluiten waar je je het meest thuis voelt.</p>
+            <a href="vraag5.html"><button>Verder</button></a>
+          `;
+          launchConfetti();
+        } else {
+          feedback.textContent = "Helaas, probeer opnieuw.";
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>
