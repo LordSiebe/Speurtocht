@@ -4,54 +4,47 @@
   <meta charset="UTF-8">
   <title>Speurtocht</title>
   
-<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<style>
-  body {
-    font-family: 'Poiret One', cursive;
-    margin: 0;
-    padding: 0;
-    background: url('https://media.indebuurt.nl/tilburg/2018/03/19133802/tilburg-kaart-1815.png') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-  }
-  .container {
-    background-color: rgba(0, 57, 255, 0.8);
-    max-width: 700px;
-    margin: 5% auto;
-    padding: 2rem;
-    border-radius: 12px;
-  }
-  input {
-    width: 100%;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    background-color: white;
-    color: #0922ff;
-    font-family: 'Delius Swash Caps', cursive;
-  }
-  button {
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    background-color: white;
-    color: #0922ff;
-    font-family: 'Delius Swash Caps', cursive;
-    cursor: pointer;
-  }
-  .correct-message {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ffff66;
-    margin-top: 1rem;
-  }
-</style>
-
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <style>
+    body {
+      font-family: 'Poiret One', cursive;
+      margin: 0;
+      padding: 0;
+      background: url('https://media.indebuurt.nl/tilburg/2018/03/19133802/tilburg-kaart-1815.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .container {
+      background-color: rgba(0, 57, 255, 0.8);
+      max-width: 700px;
+      margin: 5% auto;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .intro {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    .start-button {
+      margin-top: 1.5rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 12px;
+      background-color: #ffffff;
+      color: #0922ff;
+      font-family: 'Delius Swash Caps', cursive;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .start-button:hover {
+      background-color: #e0e0ff;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -62,6 +55,10 @@
       Elke locatie onthult een geheim, elke oplossing opent de weg naar de volgende stap... Maar wees gewaarschuwd: niet alles is wat het lijkt 👀.</p>
       <p>Pak je fiets 🚲, vertrouw op elkaar 🤝, en laat je leiden door je intuïtie. Open maar dossier 1 om te starten ⏳</p>
     </div>
+
+    <a href="vraag1.html">
+      <button class="start-button">Start de speurtocht 🚲</button>
+    </a>
   </div>
 </body>
 </html>
