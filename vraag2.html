@@ -92,7 +92,8 @@
       function checkAnswer() {
         const input = document.getElementById('answer').value.trim().toLowerCase();
         const feedback = document.getElementById('feedback');
-        if (input === 'berlijn') {
+        const acceptableAnswers = ['berlijn', 'berlijn café', 'berlijn cafe'];
+if (acceptableAnswers.includes(input)) {
           feedback.innerHTML = `
             <span class="correct-message">Correct</span>
             <p><strong>Aanwijzing:</strong> Lekker bezig! Tijd voor een zomers drankje op het terras, oh en open dossier 3!.</p>
