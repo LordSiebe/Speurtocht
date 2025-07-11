@@ -92,7 +92,8 @@
       function checkAnswer() {
         const input = document.getElementById('answer').value.trim().toLowerCase();
         const feedback = document.getElementById('feedback');
-        if (input === 'Goesting') {
+        const acceptableAnswers = ['goesting', 'café goesting'];
+if (acceptableAnswers.includes(input)) {
           feedback.innerHTML = `
             <span class="correct-message">Correct!</span>
             <p><strong>Aanwijzing:</strong> Goed gedaan! Zodra je bij de locatie bent mag je Dossier nummer 2 openen...</p>
