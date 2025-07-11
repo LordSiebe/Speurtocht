@@ -55,7 +55,7 @@
 </head>
 <body>
   <div class="container">
-    <h2>Van hieruit fiets je naar een café dat klinkt als een hoofdstad, maar dan iets alternatiever. Welk café?</h2>
+    <h2>Wat is jullie 2e gevonden locatie???</h2>
     
     
     <input type="text" id="answer" placeholder="Typ hier je antwoord...">
@@ -92,10 +92,10 @@
       function checkAnswer() {
         const input = document.getElementById('answer').value.trim().toLowerCase();
         const feedback = document.getElementById('feedback');
-        if (input === 'berlijn') {
+        if (input === 'Berlijn') {
           feedback.innerHTML = `
-            <span class="correct-message">Correct!</span>
-            <p><strong>Aanwijzing:</strong> Lekker bezig! Tijd voor een zomers drankje in een buitengelegen café.</p>
+            <span class="correct-message">Correct</span>
+            <p><strong>Aanwijzing:</strong> Lekker bezig! Tijd voor een zomers drankje op het terras, vergeet niet wat lekkers te bestellen ;D.</p>
             <a href="vraag3.html"><button>Verder</button></a>
           `;
           launchConfetti();
