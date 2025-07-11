@@ -55,7 +55,7 @@
 </head>
 <body>
   <div class="container">
-    <h2>In welk café in Tilburg kun je 'goesting' krijgen in Belgische bieren?</h2>
+    <h2>Wat is jullie huidige locatie?</h2>
     
     
     <input type="text" id="answer" placeholder="Typ hier je antwoord...">
@@ -92,10 +92,10 @@
       function checkAnswer() {
         const input = document.getElementById('answer').value.trim().toLowerCase();
         const feedback = document.getElementById('feedback');
-        if (input === 'goesting') {
+        if (input === 'Goesting') {
           feedback.innerHTML = `
             <span class="correct-message">Correct!</span>
-            <p><strong>Aanwijzing:</strong> Goed gedaan! Zodra je bij de eerste locatie bent mag je envelop nummer 1 openen...</p>
+            <p><strong>Aanwijzing:</strong> Goed gedaan! Zodra je bij de eerste locatie bent mag je Dossier nummer 1 openen...</p>
             <a href="vraag2.html"><button>Verder</button></a>
           `;
           launchConfetti();
