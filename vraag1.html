@@ -92,11 +92,11 @@
       function checkAnswer() {
         const input = document.getElementById('answer').value.trim().toLowerCase();
         const feedback = document.getElementById('feedback');
-        const acceptableAnswers = ['goesting', 'café goesting'];
+        const acceptableAnswers = ['loc brewery', 'spoorzone'];
 if (acceptableAnswers.includes(input)) {
           feedback.innerHTML = `
             <span class="correct-message">Correct!</span>
-            <p><strong>Aanwijzing:</strong> Goed gedaan! Zodra je bij de locatie bent mag je Dossier nummer 2 openen...</p>
+            <p><strong>Aanwijzing:</strong> Goed gedaan! Zodra je bij de locatie bent mag je Dossier nummer 1 openen...</p>
             <a href="vraag2.html"><button>Verder</button></a>
           `;
           launchConfetti();
